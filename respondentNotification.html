@@ -1,0 +1,17 @@
+﻿<p>Hello <?= name ?>,</p>
+<p>
+    We have received your MSTI Scholarship application for the 2016/2017 academic year.
+    Below is a copy of the application you have submitted.
+</p>
+<p>
+    We will be in contact with you soon in regards to next steps.
+    Please be sure you have submitted a FAFSA (Free Application for Federal Student Aid) application for 2015/2016.
+    The form is available at www.fafsa.ed.gov
+</p>
+
+<? var myData = data;
+   for (var i = 0; i < myData.length; i++) { ?>
+<p><b><?= myData[i][0] ?></b> >>> <?= myData[i][1] ?></p>
+<? } ?>
+
+

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background: url('https://storage.googleapis.com/risemedialibrary-22da0ca4-2538-4387-b515-ee28f6e84b64/Building%203%20Display%20Images/Background1.jpg') no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        div#main {
+            width: 100%;
+            height: auto;
+            padding-bottom: 30px;
+        }
+
+        form#msti-form {
+            width: 50%;
+            height: auto;
+            display: block;
+            padding: 10px;
+            background-color: white;
+            box-shadow: #ccc 2px 2px 10px 6px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+            form#msti-form * {
+                display: block;
+            }
+
+            form#msti-form h2 {
+                color: #002a4e;
+                text-align: center;
+                font-size: 30px;
+            }
+
+            form#msti-form h4 {
+                color: #002a4e;
+                font-size: 20px;
+            }
+
+            form#msti-form textarea {
+                width: 80%;
+                height: 100px;
+            }
+
+            form#msti-form label {
+                color: #446A59;
+                font-size: 20px;
+            }
+
+        input[type=submit] {
+            padding: 5px 15px;
+            background: #002a4e;
+            border: 0 none;
+            cursor: pointer;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            width: 100px;
+            height: 30px;
+        }
+
+        section {
+            margin-bottom: 10px;
+        }
+
+        div#output {
+            display: none;
+            width: 50%;
+            height: auto;
+            padding: 10px;
+            background-color: white;
+            box-shadow: #ccc 2px 2px 10px 6px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+            div#output h4 {
+                color: #002a4e;
+                font-size: 28px;
+                text-align: center;
+            }
+
+            div#output p {
+                font-size: 20px;
+            }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='output'>
+            <h4>Thank you for your submission.</h4>
+            <p>A copy of your submission will be emailed to you shortly, keep this for your own records. Awards will be announced by April 28th, 2016. If selected, awards will be made to your student account on approximately June 17, 2016.</p>
+        </div>
+        <div id='form-content'>
+            <form id='msti-form' onsubmit='sendForm(this)'>
+                <h2>MSTI Scholarship Application</h2>
+                <h4>The Future Math/Science Teacher Scholarships will support students who intend to become secondary mathematics or science teachers. The awards will generally vary from $1,000 - $3,000. If selected, awards will be made to your student account on approximately June 17, 2016.</h4>
+                <section><label>First Name: <input type='text' name='user-firstname' required /></label></section>
+                <section><label>Last Name: <input type='text' name='user-lastname' required /></label></section>
+                <section><label>Middle Name: <input type='text' name='user-middlename' /></label></section>
+                <section><label>Student ID: <input type='text' name='user-id' required /></label></section>
+                <section><label>Email: <input type='email' name='user-email' required /></label></section>
+                <section><label>Street Address: <input type='text' name='user-street' required /></label></section>
+                <section><label>City, State & Zip: <input type='text' name='user-address' required /></label></section>
+                <section><label>Telephone Number: <input type='tel' name='user-telephone' required /></label></section>
+                <section>
+                    <label>
+                        OPTIONAL: Please indicate which of the following categories you indentify with. Mark all that apply.
+                        <select multiple='True' name='user-demographic'>
+                            <option value='Alaskan Native (Eskimo or Aleut)'>Alaskan Native (Eskimo or Aleut)</option>
+                            <option value='American Indian'>American Indian</option>
+                            <option value='Asian'>Asian</option>
+                            <option value='Black or African American'>Black or African American</option>
+                            <option value='Hispanic or Latino'>Hispanic or Latino</option>
+                            <option value='Native Pacific Islander'>Native Pacific Islander</option>
+                            <option value='Caucasian'>Caucasian</option>
+                            <option value='Decline to State'>Decline to State</option>
+                            <option value='Other'>Other</option>
+                        </select>
+                    </label>
+                </section>
+                <section><label>If you answered Other in the question above write your answer here.<input type='text' name='user-other' /></label></section>
+                <section>
+                    <label>
+                        Gender:
+                        <select name='user-gender'>
+                            <option value='Female'>Female</option>
+                            <option value='Male'>Male</option>
+                        </select>
+                    </label>
+                </section>
+                <section><label>GPA of your last 60 units: <input type='text' name='user-gpa60' required /></label></section>
+                <section>
+                    <label>
+                        Subject Matter Area(s)
+                        <select name='user-subject' multiple='True' required>
+                            <option value='Mathematics (Full)'>Mathematics (Full)</option>
+                            <option value='Foundation Level Mathematics'>Foundation Level Mathematics</option>
+                            <option value='Biology'>Biology</option>
+                            <option value='Chemistry'>Chemistry</option>
+                            <option value='Geo Science'>Geo Science</option>
+                            <option value='Physics'>Physics</option>
+                            <option value='FL General Science'>FL General Science</option>
+                        </select>
+                    </label>
+                </section>
+                <section><label>Cumulative GPA:<input type='text' name='user-cummulativegpa' required /></label></section>
+                <section><label>Have you completed your FAFSA: (Financial need is not a criteria, but a 2015/2016 FAFSA must be on file) <input type='text' name='user-fafsa' required /></label></section>
+                <h4>Service to School and/or Community</h4>
+                <h4>Please elaborate on activities or services to your school and/or community in which you have been recently involved. List and describe each activity, indicate the length of time you have been involved, and indicate any leadership positions you may have held.</h4>
+                <section><label>Experience #1<textarea name='user-exp1' class='user-experiences'></textarea></label></section>
+                <section><label>Experience #2<textarea name='user-exp2' class='user-experiences'></textarea></label></section>
+                <section><label>Experience #3<textarea name='user-exp3' class='user-experiences'></textarea></label></section>
+                <section><label>Experience #4<textarea name='user-exp4' class='user-experiences'></textarea></label></section>
+                <h4>Please describe your potential as a role model, as an effective teacher, and as a motivator of diverse student populations. Please keep between 300-500 words.</h4>
+                <section><textarea name='user-rolemodel' class='user-experiences'></textarea></section>
+                <section><input type='submit' value='Submit' /></section>
+            </form>
+        </div>
+    </div>
+    <script>
+
+      function preventFormSubmit() {
+        var forms = document.querySelectorAll('form');
+        for (var i = 0; i < forms.length; i++) {
+          forms[i].addEventListener('submit', function(event) {
+            event.preventDefault();
+          });
+        }
+      }
+      window.addEventListener('load', preventFormSubmit);
+
+      function onSuccess(){
+         document.getElementById('form-content').style.display = 'none';
+         document.getElementById('output').style.display = 'block';
+      }
+
+      function sendForm(data){
+         google.script.run.withSuccessHandler(onSuccess).getData(data);
+      }
+
+    </script>
+</body>
+</html>
